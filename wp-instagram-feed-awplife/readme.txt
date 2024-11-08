@@ -4,7 +4,7 @@ Donate link: https://paypal.me/awplife
 Tags: instagram, instagram feed, instagram gallery, social media feed, instagram post
 Requires at least: 4.0
 Tested up to: 6.6.2
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,10 @@ Please post your question on the plugin support forum: https://wordpress.org/sup
 
 
 == Changelog ==
+
+= 1.4.1 =
+* Bug Fix: Fixed.
+* Tested for wordpress version 6.6.2
 
 = 1.4.0 =
 * Tested for wordpress version 6.6.2
