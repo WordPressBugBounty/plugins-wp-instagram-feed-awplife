@@ -3,8 +3,8 @@ Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkh
 Donate link: https://paypal.me/awplife
 Tags: instagram, instagram feed, instagram gallery, social media feed, instagram post
 Requires at least: 4.0
-Tested up to: 6.6.2
-Stable tag: 1.4.1
+Tested up to: 6.7.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ Configuration settings allow setting gallery rows & columns, image limit on gall
 
 *How to get Instagram Access Token?*
 
-https://www.youtube.com/watch?v=IEXDGIeIq_8
+https://www.youtube.com/watch?v=VrqbUP67Jbw
 
 
 **Free Social Media Feed Features**
@@ -135,6 +135,11 @@ Please post your question on the plugin support forum: https://wordpress.org/sup
 
 
 == Changelog ==
+
+= 1.4.2 =
+* Bug Fix: Fixed.
+* Tested for wordpress version 6.7.1
+* Generate the Instagram Access Token 2024 New video Added
 
 = 1.4.1 =
 * Bug Fix: Fixed.
