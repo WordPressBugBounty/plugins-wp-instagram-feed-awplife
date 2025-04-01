@@ -60,7 +60,7 @@ wp_enqueue_script( 'ifgp-insta-color-picker', IFGP_PLUGIN_URL  . 'js/insta-color
 										<div class="col-md-4">
 											<div class="ma_field_discription">
 												<h4><?php esc_html_e('Instagram Accese Tocken', 'instagram-feed-gallery'); ?></h4>
-												<p><?php esc_html_e('Enter access token to add the Instagram feed. You can generate access token easily from here', 'instagram-feed-gallery'); ?> <a target="_blank" href="https://www.youtube.com/watch?v=IEXDGIeIq_8&t=2s"><?php _e('Youtube Video', 'instagram-feed-gallery'); ?></a></p> 
+												<p><?php esc_html_e('Enter access token to add the Instagram feed. You can generate access token easily from here', 'instagram-feed-gallery'); ?> <a target="_blank" href="https://www.youtube.com/watch?v=VrqbUP67Jbw"><?php _e('Youtube Video', 'instagram-feed-gallery'); ?></a></p> 
 
 											</div>
 										</div>

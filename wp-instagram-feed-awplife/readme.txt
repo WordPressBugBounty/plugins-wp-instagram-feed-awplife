@@ -3,12 +3,12 @@ Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkh
 Donate link: https://paypal.me/awplife
 Tags: instagram, instagram feed, instagram gallery, social media feed, instagram post
 Requires at least: 4.0
-Tested up to: 6.7.1
-Stable tag: 1.4.2
+Tested up to: 6.7.2
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social Media Feed for Instagram is a sleek plugin for showcasing Instagram content on your WordPress site.
+Social Media Feed for Instagram is a clean, customizable, and responsive WordPress plugin designed to showcase your Instagram feed content seamlessly.
 
 == Description ==
 
@@ -62,7 +62,9 @@ https://www.youtube.com/watch?v=eqripRcj5CE
 * Instagram Image Links
 * Instagram View Button
 * Instagram Album
-* Instagram Video
+* Instagram Like Count
+* Instagram Comment Count
+* Instagram User Profile
 * Load More
 * Sharing Icon
 * Instagram Links Setting
@@ -135,6 +137,10 @@ Please post your question on the plugin support forum: https://wordpress.org/sup
 
 
 == Changelog ==
+
+= 1.4.3 =
+* Bug Fix: Fixed.
+* Tested for wordpress version 6.7.2
 
 = 1.4.2 =
 * Bug Fix: Fixed.
