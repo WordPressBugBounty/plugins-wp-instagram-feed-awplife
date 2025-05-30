@@ -51,7 +51,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 							'class' => array()
 						)
 					);
-					$newDate = date("F j, Y ", strtotime($insta_time));
+					$gmt_time = gmdate( 'Y-m-d H:i:s', strtotime( $insta_time ) );
+					$newDate  = date_i18n( 'F j, Y', get_date_from_gmt( $gmt_time ) );
+
 					?>
 
 					<?php if($insta_lightbox == 'yes') { ?>
@@ -64,7 +66,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 									<?php } if($insta_icon_image == 'yes') { ?><svg class="insta_svg_icon" width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.51L17.51 6.49889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><?php $insta_allowed_icon_html; } ?>
 									<?php if($insta_caption_image == 'yes') { ?>
 										<figcaption>
-											<p class="pw-caption"><?php echo wp_trim_words( esc_html($insta_photos_caption), 3); ?></p>
+											<p class="pw-caption"><?php echo esc_html( wp_trim_words( $insta_photos_caption, 3 ) ); ?></p>
+
 										</figcaption>
 									<?php } ?>
 								</div>
@@ -80,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 									<?php } if($insta_icon_image == 'yes') { ?><svg class="insta_svg_icon" width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.51L17.51 6.49889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><?php $insta_allowed_icon_html; } ?>
 									<?php if($insta_caption_image == 'yes') { ?>
 										<figcaption>
-											<p class="pw-caption"><?php echo wp_trim_words( esc_html($insta_photos_caption), 3); ?></p>
+											<p class="pw-caption"><?php echo esc_html( wp_trim_words( $insta_photos_caption, 3 ) ); ?></p>
 										</figcaption>
 									<?php } ?>
 								</div>
@@ -90,7 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				} // end of attachment foreach
 				
 			} else if($instagram_response == 403) { 
-					_e('Sorry! No image gallery found.', 'instagram-feed-gallery');
+					esc_html_e('Sorry! No image gallery found.', 'wp-instagram-feed-awplife');
 				?>
 					
 				<div><strong>Access Token Limit:</strong> calls within one hour = 200 * Number of Users | <strong>more details:</strong> <a href="https://developers.facebook.com/docs/graph-api/overview/rate-limiting#application-level-rate-limiting" target="_blank">Check Here</a></div>

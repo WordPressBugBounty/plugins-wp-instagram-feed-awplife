@@ -69,7 +69,7 @@ $igp_hover_icon = sanitize_text_field(IFGP_PLUGIN_URL."/img/instagram-gallery-pr
 							modalHtml += "<div class='carouselGallery-modal-text'>";
 							modalHtml += "<div class='insta_lightbox_header'>";
 							modalHtml += "<div class='insta_lightbox_header_content'>";
-							modalHtml += "<div class='insta_lightbox_avatar'><img src='<?php echo IFGP_PLUGIN_URL ?>img/instagram-gallery-premium.png' width='70%' height='100%'></div>";
+							modalHtml += "<div class='insta_lightbox_avatar'><img src='<?php echo esc_url( IFGP_PLUGIN_URL . "img/instagram-gallery-premium.png" ); ?>' width='70%' height='100%'></div>";
 							modalHtml += "<div class='insta_lightbox_user_button'><div class='insta_lightbox_username'><a href='"+postURL+"'> "+username+"</a></div>";
 							modalHtml += "</div></div>";
 							modalHtml += "<div class='insta_lightbox_followbtn'><a target='_new' href='https://www.instagram.com/"+username+"' type='button' class='btn btn-primary'>Follow</a></div>";

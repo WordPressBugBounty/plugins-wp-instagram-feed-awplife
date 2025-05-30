@@ -2,9 +2,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
 @package Wp Instagram Feed Awplife
-Plugin Name: Social Media Feed
+Plugin Name: Social Media Feed – Display Instagram Feed on WordPress
 Description: Instagram Feed Gallery Plugin For WordPress allows you to fetch your Instagram feeds to your WordPress website.
-Version: 1.4.3
+Version: 1.4.4
 Author: A WP Life
 Author URI: https://awplife.com/
 License: GPLv2 or later
@@ -26,7 +26,7 @@ if ( ! class_exists( 'Instagram_Feed_Awplife' ) ) {
 		
 		protected function _constants() {
 			//Plugin Version
-			define( 'IFGP_PLUGIN_VER', '1.4.3' );
+			define( 'IFGP_PLUGIN_VER', '1.4.4' );
 			
 			//Plugin Text Domain
 			define("IFGP_TXTDM", "wp-instagram-feed-awplife" );
