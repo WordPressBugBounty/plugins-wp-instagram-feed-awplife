@@ -3,8 +3,8 @@ Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkh
 Donate link: https://paypal.me/awplife
 Tags: instagram, instagram feed, instagram gallery, social media feed, photo feed
 Requires at least: 4.0
-Tested up to: 6.8.1
-Stable tag: 1.4.5
+Tested up to: 6.8.2
+Stable tag: 1.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Please post questions in the [WordPress support forum](https://wordpress.org/sup
 9. Lightbox Color Customization
 
 == Changelog ==
+
+= 1.4.6 =
+* Tested with WordPress 6.8.2
 
 = 1.4.5 =
 * Renamed plugin to comply with trademark policy
