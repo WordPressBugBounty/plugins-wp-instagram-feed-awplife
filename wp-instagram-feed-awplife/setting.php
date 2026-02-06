@@ -248,7 +248,7 @@ wp_enqueue_script( 'ifgp-insta-color-picker', IFGP_PLUGIN_URL  . 'js/insta-color
 										<h1><strong><?php esc_html_e( 'Offer:', 'wp-instagram-feed-awplife' ); ?></strong><?php esc_html_e( 'Upgrade To Premium Just In Half Price', 'wp-instagram-feed-awplife' ); ?> <strike> <?php esc_html_e( '$49', 'wp-instagram-feed-awplife' ); ?></strike><strong> <?php esc_html_e( '$39', 'wp-instagram-feed-awplife' ); ?></strong></h1>
 										<br>
 										<a href="https://awplife.com/wordpress-plugins/instagram-feed-gallery-premium/" target="_blank" class="button button-primary button-hero load-customize hide-if-no-customize"><?php esc_html_e( 'Premium Version Details', 'wp-instagram-feed-awplife' ); ?></a>
-										<a href="https://awplife.com/demo/wp-instagram-feed-awplife-premium" target="_blank" class="button button-primary button-hero load-customize hide-if-no-customize"><?php esc_html_e( 'Check Live Demo', 'wp-instagram-feed-awplife' ); ?></a>
+										<a href="https://awplife.com/demo/instagram-feed-gallery-premium/" target="_blank" class="button button-primary button-hero load-customize hide-if-no-customize"><?php esc_html_e( 'Check Live Demo', 'wp-instagram-feed-awplife' ); ?></a>
 									</div>
 								</div>
 							</div>

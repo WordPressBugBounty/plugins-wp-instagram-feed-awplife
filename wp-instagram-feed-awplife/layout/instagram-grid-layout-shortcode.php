@@ -19,16 +19,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php
 			if($instagram_response == 200) {
 				foreach($instagram_data['data'] as $key =>  $attachment_id) {
-					$insta_username 		= $attachment_id['username'];
-					$insta_time 			= $attachment_id['timestamp'];
-					$insta_photos_link 		= $attachment_id['permalink'];
-					$insta_media_type		= $attachment_id['media_type'];	
-					$thumbnail_url 			= $attachment_id['media_url'];	
+					$insta_username 		= isset($attachment_id['username']) ? $attachment_id['username'] : 'Unknown User';
+					$insta_time 			= isset($attachment_id['timestamp']) ? $attachment_id['timestamp'] : '';
+					$insta_photos_link 		= isset($attachment_id['permalink']) ? $attachment_id['permalink'] : '#';
+					$insta_media_type		= isset($attachment_id['media_type']) ? $attachment_id['media_type'] : 'IMAGE';
+					$thumbnail_url 			= isset($attachment_id['media_url']) ? $attachment_id['media_url'] : '';
 
-					if(isset($attachment_id['caption'])){
+					if(isset($attachment_id['caption']) && !empty($attachment_id['caption'])){
 					$insta_photos_caption     	= $attachment_id['caption'];
 					} else {
-						$insta_photos_caption = '';
+						$insta_photos_caption = 'No caption available';
 					}
 					if(isset($attachment_id['thumbnail_url'])){
 					$thumbnail_video_image     	= $attachment_id['thumbnail_url'];
@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 					<?php if($insta_lightbox == 'yes') { ?>
 						<div class="col-md-<?php echo esc_attr( $insta_grid_columns_l ); ?> insta-gallery-div">
-							<a class="insta-if-navigation insta-main-div carouselGallery-carousel" type="<?php echo esc_attr( $insta_media_type ); ?>" data-posturl="<?php echo esc_url( $insta_photos_link ); ?>" data-username="<?php echo esc_html( $insta_username ); ?>" data-img-date="<?php echo esc_attr( $newDate ); ?>" data-index="<?php echo esc_attr( $key ); ?>" data-imagetext="<?php echo esc_html( $insta_photos_caption ); ?>" data-imagepath="<?php echo esc_url( $thumbnail_url ); ?>">
+							<a class="insta-if-navigation insta-main-div carouselGallery-carousel" type="<?php echo esc_attr( $insta_media_type ); ?>" data-posturl="<?php echo esc_url( $insta_photos_link ); ?>" data-url="<?php echo esc_url( $thumbnail_url ); ?>" data-username="<?php echo esc_html( $insta_username ); ?>" data-imgdate="<?php echo esc_attr( $newDate ); ?>" data-index="<?php echo esc_attr( $key ); ?>" data-imagetext="<?php echo esc_html( $insta_photos_caption ); ?>" data-imagepath="<?php echo esc_url( $thumbnail_url ); ?>">
 								<div class="insta-img-thumbnail">
 									<img class='insta-img-thumbnail' src='<?php if ( $insta_media_type == 'VIDEO' ) { echo esc_url( $thumbnail_video_image ); } else { echo esc_url( $thumbnail_url );} ?>'>
 									<?php if($insta_media_type == 'VIDEO') { ?>

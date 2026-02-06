@@ -2,15 +2,20 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
 @package Wp Instagram Feed Awplife
-Plugin Name: Social Media Feed – Display Instagram Feed on WordPress
-Description: Instagram Feed Gallery Plugin For WordPress allows you to fetch your Instagram feeds to your WordPress website.
-Version: 1.4.6
-Author: A WP Life
-Author URI: https://awplife.com/
-License: GPLv2 or later
-Text Domain: wp-instagram-feed-awplife
-Domain Path: /languages
-*/
+ * Plugin Name:       Social Media Feed Gallery for Instagram
+ * Plugin URI:        https://awplife.com/wordpress-plugins/instagram-feed-gallery-premium/
+ * Description:       Create a responsive social media feed gallery with Instagram access token. Grid layout, lightbox, shortcode support.
+ * Version:           1.4.9
+ * Requires at least: 5.0
+ * Requires PHP:      7.0
+ * Author:            A WP Life
+ * Author URI:        https://profiles.wordpress.org/awordpresslife
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       wp-instagram-feed-awplife
+ * Domain Path:       /languages
+ * License:           GPL2
+ */
 
 if ( ! class_exists( 'Instagram_Feed_Awplife' ) ) {
 
@@ -26,13 +31,13 @@ if ( ! class_exists( 'Instagram_Feed_Awplife' ) ) {
 		
 		protected function _constants() {
 			//Plugin Version
-			define( 'IFGP_PLUGIN_VER', '1.4.6' );
+			define( 'IFGP_PLUGIN_VER', '1.4.9' );
 			
 			//Plugin Text Domain
 			define("IFGP_TXTDM", "wp-instagram-feed-awplife" );
 
 			//Plugin Name
-			define( 'IFGP_PLUGIN_NAME', __( 'Wp-Instagram-Feed-Awplife', IFGP_TXTDM ) );
+			define( 'IFGP_PLUGIN_NAME', 'wp-instagram-feed-awplife' );
 
 			//Plugin Slug
 			define( 'IFGP_PLUGIN_SLUG', 'wp-instagram-feed-awplife' );
@@ -56,7 +61,7 @@ if ( ! class_exists( 'Instagram_Feed_Awplife' ) ) {
 		 */
 		protected function _hooks() {
 			//Load text domain
-			add_action( 'plugins_loaded', array( $this, '_load_textdomain' ) );
+			add_action( 'init', array( $this, '_load_textdomain' ) );
 			
 			//add instagram type gallery menu item, change menu filter for multisite
 			add_action( 'admin_menu', array( $this, 'instagram_feed_menu' ) );
