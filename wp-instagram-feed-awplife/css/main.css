@@ -492,7 +492,7 @@ hr {
 
 .carouselGallery-scrollbox {
     display: block;
-    // max-height - set by javascript
+    /* max-height - set by javascript */
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -572,7 +572,7 @@ hr {
     letter-spacing: 0.2px;
 }
 
-.carouselGallery-modal .container{
+.carouselGallery-modal .ifgp-container {
     padding: 0;
     font-family: "SwedenSans", Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -652,7 +652,7 @@ hr {
 	width: 340px;
     height: 100%;
 }
-.carouselGallery-modal-text:hover { // ie10 transform glitch fix
+.carouselGallery-modal-text:hover { /* ie10 transform glitch fix */
     background-color: #fffffe;
 }
 .carouselGallery-modal-image img{
@@ -717,7 +717,7 @@ hr {
     }
 }
 @media (max-width: 1200px){
-    .carouselGallery-modal .container{
+    .carouselGallery-modal .ifgp-container{
         padding-right: 0;
         width: 100%;
     }
@@ -742,7 +742,7 @@ hr {
     }
 }
 @media only screen and (min-width: 940px) and (max-width: 1200px) and (orientation: landscape) {
-    .carouselGallery-modal .container{
+    .carouselGallery-modal .ifgp-container{
         padding-right: 334px;
         width: 850px;
     }
@@ -892,9 +892,9 @@ hr {
     -moz-osx-font-smoothing: grayscale;
 }
 
-// =================================
-// === Icons mixin =================
-// =================================
+/* ================================= */
+/* === Icons mixin ================= */
+/* ================================= */
 .icons() {
     font-family: 'icons';
     speak: none;
@@ -1616,5 +1616,5 @@ hr {
     content: "\e636";
     }
 
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */

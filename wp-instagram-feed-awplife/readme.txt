@@ -1,10 +1,10 @@
-﻿=== Social Media Feed Gallery ===
+=== Social Media Feed Gallery ===
 Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
 Donate link: https://paypal.me/awplife
 Tags: social media gallery, instagram feed, photo gallery, image gallery, feed gallery
-Requires at least: 4.0
+Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.4.9
+Stable tag: 1.5.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,18 @@ Looking for an easy way to showcase your Instagram photos on your website? This 
 **How to Generate an Access Token**
 
 https://www.youtube.com/watch?v=VrqbUP67Jbw
+
+== External services ==
+
+This plugin relies on the **Instagram Graph API** to fetch media content (images and videos) from your Instagram account to display in your gallery.
+
+* **Service:** Instagram Graph API (Meta Platforms, Inc.)
+* **What data is sent:** Your Instagram Access Token, media IDs, and query parameters to specify image/video fields and limits. 
+* **When data is sent:** Data is sent via a server-side request (`wp_remote_get`) every time the gallery shortcode is loaded on your site.
+* **Privacy & Terms:**
+  - [Instagram Data Policy](https://help.instagram.com/519522125107875)
+  - [Meta Privacy Policy](https://www.facebook.com/privacy/policy/)
+  - [Instagram Terms of Use](https://help.instagram.com/581066165581870)
 
 **Complete Setup Tutorial**
 
@@ -84,7 +96,6 @@ Each gallery gets its own shortcode, so you can create multiple feeds with diffe
 * Lightbox navigation controls
 * Shortcode generator
 * Responsive design
-* Bootstrap 4.x framework
 * Translation ready
 
 = Pro Features =
@@ -164,6 +175,20 @@ No. Only public account posts can be fetched through the API. Switch your accoun
 9. Lightbox color settings (Pro)
 
 == Changelog ==
+
+= 1.5.1 =
+** UI Redesign: Implemented premium glassmorphism header and improved layout selection UI
+* Fixed: Corrected "Instagramm" typo in main header title
+* Enhanced "Upgrade to Pro" section with high-impact conversion button
+* Improved UI consistency: Centered/aligned configuration buttons in settings tabs
+* Compliance: Added proper resource versioning to all frontend and admin styles
+* Security: Refined translatable strings with ordered placeholders and translator comments
+* Clean Code: Removed discouraged legacy textdomain loading for modern WP compatibility
+* Tested with WordPress 6.9
+
+= 1.5.0 =
+* Redesigned "Upgrade to Pro" tab for a more premium experience
+* Added visual previews for Pro layouts in the "Upgrade to Pro" tab
 
 = 1.4.9 =
 * Fixed: Translation loading triggered too early warning in WordPress 6.7.0+

@@ -1,0 +1,185 @@
+/* IFGP Custom Layout System (Replacment for Bootstrap) */
+
+/* Grid System */
+.ifgp-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: block !important;
+}
+
+.ifgp-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ifgp-col-12, .ifgp-col-10, .ifgp-col-9, .ifgp-col-8, .ifgp-col-6, .ifgp-col-4, .ifgp-col-3, .ifgp-col-2,
+.ifgp-col-md-10, .ifgp-col-md-9, .ifgp-col-md-8, .ifgp-col-md-6, .ifgp-col-md-4, .ifgp-col-md-3, .ifgp-col-md-2,
+.ifgp-col-lg-10, .ifgp-col-lg-9, .ifgp-col-lg-3, .ifgp-col-lg-2 {
+    position: relative;
+    width: 100% !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .ifgp-col-md-10 { flex: 0 0 83.333333% !important; max-width: 83.333333% !important; width: 83.333333% !important; }
+    .ifgp-col-md-9 { flex: 0 0 75% !important; max-width: 75% !important; width: 75% !important; }
+    .ifgp-col-md-8 { flex: 0 0 66.666667% !important; max-width: 66.666667% !important; width: 66.666667% !important; }
+    .ifgp-col-md-6 { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; }
+    .ifgp-col-md-4 { flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; }
+    .ifgp-col-md-3 { flex: 0 0 25% !important; max-width: 25% !important; width: 25% !important; }
+    .ifgp-col-md-2 { flex: 0 0 16.666667% !important; max-width: 16.666667% !important; width: 16.666667% !important; }
+}
+
+@media (min-width: 992px) {
+    .ifgp-col-lg-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .ifgp-col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+    .ifgp-col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+    .ifgp-col-lg-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+}
+
+/* Modal System */
+.ifgp-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ifgp-modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    max-width: 800px;
+}
+
+.ifgp-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,.5);
+}
+
+.ifgp-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.ifgp-modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.ifgp-close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.ifgp-close:hover {
+    opacity: .75;
+}
+
+/* Helper Classes */
+.ifgp-text-center { text-align: center; }
+.ifgp-text-left { text-align: left; }
+.ifgp-text-right { text-align: right; }
+.ifgp-d-flex { display: flex; }
+.ifgp-align-items-start { align-items: flex-start; }
+.ifgp-align-items-center { align-items: center; }
+.ifgp-justify-content-between { justify-content: space-between; }
+.ifgp-mb-10 { margin-bottom: 10px !important; }
+.ifgp-mb-20 { margin-bottom: 20px !important; }
+.ifgp-mt-20 { margin-top: 20px !important; }
+
+/* Utility Classes */
+.ifgp-img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.ifgp-form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+}
+
+.ifgp-panel-body {
+    padding: 15px;
+}
+
+.ifgp-tooltip-text {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.ifgp-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.ifgp-tooltip-trigger.show-tooltip .ifgp-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

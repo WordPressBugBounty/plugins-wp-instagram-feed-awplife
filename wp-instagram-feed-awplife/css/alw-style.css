@@ -8,6 +8,7 @@
     object-fit: cover;
 }
 .insta-img-thumbnail{
+    position: relative;
     height: auto;
     max-width: 100%;
     width: 100%;
@@ -55,7 +56,7 @@
     color: #FFFFFF;
     text-align: center;
 }
-.col-md-1 figcaption {
+.ifgp-col-md-1 figcaption {
 	display: none;
 }
 .instagram-video {

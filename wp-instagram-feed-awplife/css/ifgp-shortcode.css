@@ -1,35 +1,35 @@
 @media (min-width: 768px) {
-	footer .col-md-4 svg.insta_svg_icon{
+	footer .ifgp-col-md-4 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 33% !important;
 	}
-	footer .col-md-2 svg.insta_svg_icon{
+	footer .ifgp-col-md-2 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 33% !important;
 	}
 	footer .insta-img-thumbnail figcaption {
 		display: none;
 	}
-	footer .col-md-6 svg.insta_svg_icon{
+	footer .ifgp-col-md-6 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 40% !important;
 	}
 
-	footer .col-md-3 svg.insta_svg_icon {
+	footer .ifgp-col-md-3 svg.insta_svg_icon {
 		width: 30px;
 		height: 30px;
 	}
-	footer .col-md-2 svg.insta_svg_icon {
+	footer .ifgp-col-md-2 svg.insta_svg_icon {
 		width: 20px;
 		height: 20px;
 	}
-	footer .col-md-2 svg.instagram-video {
+	footer .ifgp-col-md-2 svg.instagram-video {
 		width: 10px;
 		height: 10px;
 		right: 5px;
 		top: 5px;
 	}
-	footer .col-md-3 svg.instagram-video {
+	footer .ifgp-col-md-3 svg.instagram-video {
 		width: 20px;
 		height: 20px;
 		right: 10px;
@@ -38,63 +38,88 @@
 }
 
 @media (min-width: 768px) {
-	.sidebar .col-md-4 svg.insta_svg_icon{
+	.sidebar .ifgp-col-md-4 svg.insta_svg_icon{
 		top: 35% !important;
 		right: 30% !important;
 	}
-	.sidebar .col-md-2 svg.insta_svg_icon{
+	.sidebar .ifgp-col-md-2 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 33% !important;
 	}
-	.sidebar .col-md-3 svg.insta_svg_icon{
+	.sidebar .ifgp-col-md-3 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 33% !important;
 	}
 	.sidebar .insta-img-thumbnail figcaption {
 		display: none;
 	}
-	.sidebar .col-md-6 svg.insta_svg_icon{
+	.sidebar .ifgp-col-md-6 svg.insta_svg_icon{
 		top: 40% !important;
 		right: 40% !important;
 	}
-	.sidebar .col-md-4 svg.insta_svg_icon{
+	.sidebar .ifgp-col-md-4 svg.insta_svg_icon{
 		width: 30px;
 		height: 30px;
 	}
-	.sidebar .col-md-3 svg.insta_svg_icon {
+	.sidebar .ifgp-col-md-3 svg.insta_svg_icon {
 		width: 20px;
 		height: 20px;
 	}
-	.sidebar .col-md-2 svg.insta_svg_icon {
+	.sidebar .ifgp-col-md-2 svg.insta_svg_icon {
 		width: 20px;
 		height: 20px;
 	}
-	.sidebar .col-md-2 svg.instagram-video {
+	.sidebar .ifgp-col-md-2 svg.instagram-video {
 		width: 20px;
 		height: 20px;
 	}
-	.sidebar .col-md-3 svg.instagram-video {
+	.sidebar .ifgp-col-md-3 svg.instagram-video {
 		width: 10px;
 		height: 10px;
 		right: 10px;
 		top: 10px;
 	}
-	.sidebar .col-md-4 svg.instagram-video {
+	.sidebar .ifgp-col-md-4 svg.instagram-video {
 		right: 10px;
 		top: 10px;
 	}
 }
 
 @media (min-width: 768px) {
-	.col-md-1 svg.insta_svg_icon {
+	.ifgp-col-md-1 svg.insta_svg_icon {
 		width: 20px;
 		height: 20px;
 	}
-	.col-md-2 svg.insta_svg_icon{
+	.ifgp-col-md-2 svg.insta_svg_icon{
 		width: 30px;
 		height: 30px;
 	}
-	.col-md-2 .insta-img-thumbnail figcaption {
+	.ifgp-col-md-2 .insta-img-thumbnail figcaption {
 		display: none;
 	}
+}
+
+/* Lightbox Styles moved from layout/lightbox.php */
+.instagram-lightbox-modal .instagram-media {
+    max-width: 85% !important;
+    max-height: 85vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.instagram-lightbox-modal .instagram-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .instagram-lightbox-modal .instagram-media {
+        max-width: 95% !important;
+        max-height: 70vh !important;
+    }
 }

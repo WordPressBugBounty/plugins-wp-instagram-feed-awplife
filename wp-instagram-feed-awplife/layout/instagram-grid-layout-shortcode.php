@@ -4,18 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Instagram Feed Gallery
  */
 ?>
-<style>
-.insta-gallery-div {
-	padding: <?php echo esc_attr( $insta_image_spacing ); ?>px !important;
-}
-.carouselGallery-left, .carouselGallery-right {
-	color: <?php echo esc_attr( $insta_lightbox_color ); ?>;
-}
-.carouselGallery-modal .iconscircle-cross {
-	color: <?php echo esc_attr( $insta_lightbox_color ); ?>;
-}
-</style>
-	<div class="row">
+	<div class="ifgp-row">
 			<?php
 			if($instagram_response == 200) {
 				foreach($instagram_data['data'] as $key =>  $attachment_id) {
@@ -57,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					?>
 
 					<?php if($insta_lightbox == 'yes') { ?>
-						<div class="col-md-<?php echo esc_attr( $insta_grid_columns_l ); ?> insta-gallery-div">
+						<div class="ifgp-col-md-<?php echo esc_attr( $insta_grid_columns_l ); ?> insta-gallery-div">
 							<a class="insta-if-navigation insta-main-div carouselGallery-carousel" type="<?php echo esc_attr( $insta_media_type ); ?>" data-posturl="<?php echo esc_url( $insta_photos_link ); ?>" data-url="<?php echo esc_url( $thumbnail_url ); ?>" data-username="<?php echo esc_html( $insta_username ); ?>" data-imgdate="<?php echo esc_attr( $newDate ); ?>" data-index="<?php echo esc_attr( $key ); ?>" data-imagetext="<?php echo esc_html( $insta_photos_caption ); ?>" data-imagepath="<?php echo esc_url( $thumbnail_url ); ?>">
 								<div class="insta-img-thumbnail">
 									<img class='insta-img-thumbnail' src='<?php if ( $insta_media_type == 'VIDEO' ) { echo esc_url( $thumbnail_video_image ); } else { echo esc_url( $thumbnail_url );} ?>'>
@@ -74,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 							</a>
 						</div>
 					<?php } else { ?>	
-						<div class="col-md-<?php echo esc_attr( $insta_grid_columns_l ); ?> insta-gallery-div">
+						<div class="ifgp-col-md-<?php echo esc_attr( $insta_grid_columns_l ); ?> insta-gallery-div">
 							<a class="insta-main-div" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $insta_link_redirection ); ?>">
 								<div class="insta-img-thumbnail">
 									<img class='insta-img-thumbnail' src='<?php if ( $insta_media_type == 'VIDEO' ) { echo esc_url( $thumbnail_video_image ); } else { echo esc_url( $thumbnail_url );} ?>'>
@@ -96,9 +85,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					esc_html_e('Sorry! No image gallery found.', 'wp-instagram-feed-awplife');
 				?>
 					
-				<div><strong>Access Token Limit:</strong> calls within one hour = 200 * Number of Users | <strong>more details:</strong> <a href="https://developers.facebook.com/docs/graph-api/overview/rate-limiting#application-level-rate-limiting" target="_blank">Check Here</a></div>
+				<div><strong><?php esc_html_e('Access Token Limit:', 'wp-instagram-feed-awplife'); ?></strong> <?php esc_html_e('calls within one hour = 200 * Number of Users |', 'wp-instagram-feed-awplife'); ?> <strong><?php esc_html_e('more details:', 'wp-instagram-feed-awplife'); ?></strong> <a href="https://developers.facebook.com/docs/graph-api/overview/rate-limiting#application-level-rate-limiting" target="_blank"><?php esc_html_e('Check Here', 'wp-instagram-feed-awplife'); ?></a></div>
 				<?php } else if($instagram_response == 400) { ?>
-						<?php echo $instagram_data_decode['body']; 
+						<?php echo esc_html($instagram_data_decode['body']); 
 					}
 				?>
 	</div>
